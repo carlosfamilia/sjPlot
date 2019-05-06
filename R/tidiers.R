@@ -107,7 +107,7 @@ tidy_generic <- function(model, ci.lvl, facets, p.val) {
         dat$p.value <- pv$p.value
         dat$std.error <- attr(pv, "se.kr", exact = TRUE)
         dat$statistic <- attr(pv, "t.kr", exact = TRUE)
-        dat$df <- round(attr(pv, "df.kr", exact = TRUE))
+        dat$df <- attr(pv, "df.kr", exact = TRUE)
       }
 
     } else {
